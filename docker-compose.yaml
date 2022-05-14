@@ -6,16 +6,16 @@ services:
     container_name: plex
     network_mode: host
     devices:
-      - /dev/dri:/dev/dri
+      - /dev/bus/usb/:/dev/bus/usb/
     environment:
       - PUID=1000
       - PGID=1000
       - VERSION=docker
       - PLEX_CLAIM=${CLAIM_ID}
     volumes:
-      - /home/levankhelo/plex/library:/config
-      - /home/levankhelo/plex/tvshow:/tv
-      - /home/levankhelo/plex/movies:/movies
+      - ~/plex/library:/config
+      - ~/plex/tvshow:/tv
+      - ~/plex/movies:/movies
     restart: unless-stopped
 
 
