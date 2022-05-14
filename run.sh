@@ -9,4 +9,4 @@ fi
 
 docker compose --env-file .env config
 docker compose --env-file .env build
-docker compose -d up
+docker compose up -d
