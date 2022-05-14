@@ -7,4 +7,6 @@ if [[ ! -d ~/plex ]]; then
     mkdir -p ~/plex/movies
 fi
 
-docker compose -d --env-file .env up --build
+docker compose --env-file .env config
+docker compose --env-file .env build
+docker compose -d up
