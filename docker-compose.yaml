@@ -11,7 +11,7 @@ services:
       - PUID=1000
       - PGID=1000
       - VERSION=docker
-      - PLEX_CLAIM=claim-6jx7a4jNAHQb_vf6Q8gH
+      - PLEX_CLAIM=${CLAIM_ID}
     volumes:
       - /home/levankhelo/plex/library:/config
       - /home/levankhelo/plex/tvshow:/tv
